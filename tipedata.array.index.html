@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <li>{{vehicles[0]}}</li>
+        </ul>
+        <br><br>
+        <ul>
+            <!-- macam foreach lah -->
+            <li v-for="vehicle in vehicles">{{vehicle}}</li>
+        </ul>
+        <br><br>
+        <label for="">Tambah Vehicle</label>
+        <br>
+        <input type="text" v-model="content">
+        <button @click="addVehicle">add</button>
+        <br><br>
+        <ul>
+            <li v-for="(vehicle,index) in vehicles">
+                <button @click="removeVehicle(index)">
+                    x
+                </button>
+                {{vehicle}}
+            </li>
+        </ul>
+    </div>
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/tipedata.array.app.js"></script>
+</body>
+</html>

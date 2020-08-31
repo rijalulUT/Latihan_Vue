@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+        <button v-on:click="message = 'klik'">
+            klik
+        </button>
+        <button @click="message = 'klik dia'">
+            klik dia
+        </button>
+        <button @click="showAlert">
+            klik dia
+        </button>
+        <br>
+        {{message}}
+    </div>
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/directive.v-on.event.app.js"></script>
+</body>
+</html>

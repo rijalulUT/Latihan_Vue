@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+      Firstname:  <input v-model="firstname"><br>
+      Lasttname:  <input v-model="lastname"><br>
+      Email    :  <input v-model="email"><br>
+      Password : <input v-model="password"><br>
+        <button @click="signup">Tambah Data User</button><br><br>
+        {{info}}
+        <br><br>
+        {{errored}}
+        <br><br>
+        {{error}}
+        <br><br>
+
+      SIGN IN  <br>
+        Email    :  <input v-model="email_sign"><br>
+        Password : <input v-model="password_sign"><br>
+        <button @click="signin">Sign in</button><br><br> 
+        {{token}}
+        <br><br>
+        {{errored}}
+        <br><br>
+        {{error}}
+        <br><br>
+    </div>
+     <!-- load JS semuanya harus berurutan -->
+     
+    <!-- load vue -->
+    <script src="assets/vendor/vue.js"></script>
+
+    <!-- load library -->
+    <script src="assets/vendor/axios-min.js"></script>
+
+     <!-- load custom JS -->
+    <script src="assets/js/tes.api.js"></script>
+</body>
+</html>

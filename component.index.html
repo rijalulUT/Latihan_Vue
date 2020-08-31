@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+        <hello-bold></hello-bold><br>
+
+        <button-counter></button-counter><br>
+
+        <blog-post v-for="(post,index) in posts"
+          :key="post.id"
+          :postprops="post"
+        ></blog-post>
+    </div>
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/component.app.js"></script>
+</body>
+</html>

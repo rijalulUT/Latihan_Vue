@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+        <h1>BitCoin Price Index</h1>
+        <section v-if="errored">
+            <p>
+                We're sory
+                try again later
+            </p>
+        </section>
+        <section v-else>
+            <div v-if="loading">Loading...</div>
+            <div v-else v-for="currency in info">
+                {{currency.description}}
+                <span>
+                    <span v-html="currency.symbol"></span>
+                    {{currency.rate_float | currencydecimal }}
+                </span>
+            </div>
+        </section>
+    </div>
+     <!-- load JS semuanya harus berurutan -->
+     
+    <!-- load vue -->
+    <script src="assets/vendor/vue.js"></script>
+
+    <!-- load library -->
+    <script src="assets/vendor/axios-min.js"></script>
+
+     <!-- load custom JS -->
+    <script src="assets/js/axios.api.js"></script>
+</body>
+</html>

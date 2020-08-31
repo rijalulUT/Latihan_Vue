@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Vue Js Beginner</title>
+</head>
+<body>
+
+    <div id="app">
+        <ul>
+            <!-- macam foreach lah -->
+            <li v-for="vehicle in vehicles">
+               Type: {{vehicle.type}}
+               Brand: {{vehicle.brand}}
+               Color: {{vehicle.color}}
+            </li>
+        </ul>
+        <br><br>
+        <ul>
+            <li v-for="value in object">
+                {{value}}
+            </li>
+        </ul>
+    </div>
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/tipedata.object.app.js"></script>
+</body>
+</html>
